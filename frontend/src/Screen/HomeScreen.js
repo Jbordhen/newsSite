@@ -1,17 +1,26 @@
 import React from 'react'
 import Footer from '../Component/Footer'
 import NavBar from '../Component/NavBar'
-import { Carousel } from 'react-bootstrap'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
+import Slider from '../Component/Slider'
+import SiteInfo from '../Component/SiteInfo'
+import SiteNews from '../Component/SiteNews'
+import TopNews from '../Component/TopNews'
+import News from '../Component/News'
 
 const Div = styled.div`
     width: ${(props) => props.width || 'auto'};
-    background-color: ${(props) => props.backgroundColor || 'auto'};
     padding: ${(props) => props.padding || '0'};
     justify-content: ${(props) => props.justify || 'center'};
-    ${(props) => props.styling}
+    text-align: center;
+    @media (max-width: 768px) {
+        margin-bottom: 0;
+        justify-content: center;
+        align-content: flex-end;
+        bottom: 0;
+    }
 `
-
+/*
 const Button = styled.button`
     display: block;
     border: none;
@@ -21,42 +30,92 @@ const Button = styled.button`
     font-size: 1rem;
     font-weight: 600;
     color: inherit;
-    background-color: ${(props) => props.backgroundColor || '#122635'};
+    background: linear-gradient(90deg, #f27a54 0%, #a154f2 87.07%);
     margin: 5%;
     padding: 1% 2% 1% 2%;
+    @media (max-width: 768px) {
+        font-size: 100%;
+        margin-bottom: 0;
+    }
 `
+*/
 
 const HomeScreen = () => {
     return (
         <>
             <NavBar />
             <Div>
-                <Carousel>
-                    <Carousel.Item>
-                        <img
-                            className='d-block w-100'
-                            src='image.png'
-                            alt='First slide'
-                            style={{ overflow: 'hidden' }}
-                        />
-                        <Carousel.Caption
-                            style={{
-                                justifyContent: 'center',
-                                alignContent: 'center'
-                            }}>
-                            <h5>First slide label</h5>
-                            <p>
-                                Nulla vitae elit libero, a pharetra augue mollis
-                                interdum.
-                            </p>
-                            <Div styling={'display:flex; flex-direction: row;'}>
-                                <Button>Get Started</Button>
-                                <Button>Find Out More</Button>
-                            </Div>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                </Carousel>
+                <Slider />
             </Div>
+            <SiteInfo />
+            <SiteNews />
+            <Div
+                padding='2% 5% 2% 5%'
+                css={`
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    background: #3c444c;
+                    margin: 0 0 0 0;
+                    @media (max-width: 768px) {
+                        flex-direction: column;
+                        padding: 10% 10% 10% 10%;
+                    }
+                `}>
+                <Div
+                    css={`
+                        width: 25%;
+                        text-align: center;
+                        background: #3c444c;
+                        @media (max-width: 768px) {
+                            width: 100%;
+                            margin-bottom: 5%;
+                        }
+                    `}>
+                    <img src='account_circle.png' alt='account icon'></img>
+                    <h3>Magna Aliqua</h3>
+                    <h6>
+                        Sed ut perspiciatis unde omnis iste natus error sit
+                        voluptatem accusantium doloremque laudantium.
+                    </h6>
+                </Div>
+                <Div
+                    css={`
+                        width: 25%;
+                        text-align: center;
+                        background: #3c444c;
+                        @media (max-width: 768px) {
+                            width: 100%;
+                            margin-bottom: 5%;
+                        }
+                    `}>
+                    <img src='phonelink.png' alt='phonelink icon'></img>
+                    <h3>Consectetur Elit</h3>
+                    <h6>
+                        Sed ut perspiciatis unde omnis iste natus error sit
+                        voluptatem accusantium doloremque laudantium.
+                    </h6>
+                </Div>
+                <Div
+                    css={`
+                        width: 25%;
+                        text-align: center;
+                        background: #3c444c;
+                        @media (max-width: 768px) {
+                            width: 100%;
+                            margin-bottom: 5%;
+                        }
+                    `}>
+                    <img src='store_mall_directory.png' alt='store icon'></img>
+                    <h3>Minim Veniam</h3>
+                    <h6>
+                        Sed ut perspiciatis unde omnis iste natus error sit
+                        voluptatem accusantium doloremque laudantium.
+                    </h6>
+                </Div>
+            </Div>
+            <News />
+            <TopNews />
             <Footer />
         </>
     )

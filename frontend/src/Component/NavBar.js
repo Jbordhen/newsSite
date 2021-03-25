@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { Link } from 'react-router-dom'
 
 const Title = styled.h1`
@@ -12,11 +12,11 @@ const Title = styled.h1`
 const Nav = styled.nav`
     width: auto;
     height: auto;
-    background-color: #122635;
+    background-color: #3c444c;
 `
 const Button = styled.button`
     color: white;
-    background: #122635;
+    background: inherit;
     border: none;
     padding-left: 10%;
 `
@@ -41,7 +41,11 @@ const NavBar = () => {
     return (
         <Nav>
             <Icon>
-                <a href='https://facebook.com' style={{ color: '#bbbbbb' }}>
+                <a
+                    href='https://facebook.com'
+                    style={{
+                        color: '#bbbbbb'
+                    }}>
                     <i class='fab fa-facebook-f'></i>
                 </a>
                 <a href='https://twitter.com'>

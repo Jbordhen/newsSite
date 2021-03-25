@@ -3,9 +3,8 @@ import HomeScreen from './Screen/HomeScreen'
 import styled from 'styled-components'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
-
+const Div = styled.div``
 const App = () => {
-    const Div = styled.div``
     return (
         <Router>
             <Switch>
