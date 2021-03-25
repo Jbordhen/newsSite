@@ -129,19 +129,34 @@ const Footer = () => {
                     <Div flexDirection='column'>
                         <Title>Resources</Title>
                         <LinkContainer
-                            onClick={() =>
-                                (window.location = 'https://twitter.com')
-                            }>
+                            as='a'
+                            href='https://twitter.com'
+                            style={{
+                                textDecoration: 'none',
+                                color: 'whitesmoke'
+                            }}>
                             <i
-                                class='fab fa-twitter'
+                                className='fab fa-twitter'
                                 style={{ paddingRight: '5%' }}></i>
                             Twitter
                         </LinkContainer>
-                        <LinkContainer to='/faqs'>
-                            <i class='fab fa-facebook-f'></i>Facebook
+                        <LinkContainer
+                            as='a'
+                            href='https://facebook.com'
+                            style={{
+                                textDecoration: 'none',
+                                color: 'whitesmoke'
+                            }}>
+                            <i className='fab fa-facebook-f'></i>Facebook
                         </LinkContainer>
-                        <LinkContainer to='/chat'>
-                            <i class='fab fa-dribbble'></i>Dribble
+                        <LinkContainer
+                            as='a'
+                            href='https://dribble.com'
+                            style={{
+                                textDecoration: 'none',
+                                color: 'whitesmoke'
+                            }}>
+                            <i className='fab fa-dribbble'></i>Dribble
                         </LinkContainer>
                     </Div>
                 </Div>

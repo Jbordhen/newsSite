@@ -60,7 +60,9 @@ const SiteInfo = () => {
                             #a154f2 100%
                         );
                     `}>
-                    <i class='far fa-comments' style={{ fontSize: '50px' }}></i>
+                    <i
+                        className='far fa-comments'
+                        style={{ fontSize: '50px' }}></i>
                     <h3>2554</h3>
                     <h3>Messages</h3>
                     <h6>Posted by our users</h6>
@@ -85,7 +87,7 @@ const SiteInfo = () => {
                         background-image: url('Mask Group.png');
                     `}>
                     <i
-                        class='fas fa-map-marker-alt'
+                        className='fas fa-map-marker-alt'
                         style={{ fontSize: '50px' }}></i>
                     <h6
                         css={`
@@ -119,7 +121,7 @@ const SiteInfo = () => {
                         );
                     `}>
                     <i
-                        class='fas fa-cloud-moon-rain'
+                        className='fas fa-cloud-moon-rain'
                         style={{ fontSize: '50px' }}></i>
                     <h3>18ºC</h3>
                     <h3>Craiova, RO</h3>

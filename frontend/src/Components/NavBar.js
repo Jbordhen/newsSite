@@ -46,11 +46,11 @@ const NavBar = () => {
                     style={{
                         color: '#bbbbbb'
                     }}>
-                    <i class='fab fa-facebook-f'></i>
+                    <i className='fab fa-facebook-f'></i>
                 </a>
                 <a href='https://twitter.com'>
                     <i
-                        class='fab fa-twitter'
+                        className='fab fa-twitter'
                         style={{
                             paddingLeft: '50%',
                             color: '#bbbbbb'
@@ -58,7 +58,7 @@ const NavBar = () => {
                 </a>
                 <a href='https://google.com'>
                     <i
-                        class='fab fa-google'
+                        className='fab fa-google'
                         style={{
                             paddingLeft: '100%',
                             color: '#bbbbbb'

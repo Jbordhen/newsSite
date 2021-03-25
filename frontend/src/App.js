@@ -1,20 +1,21 @@
 import React from 'react'
-import HomeScreen from './Screen/HomeScreen'
-import styled from 'styled-components'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import HomeScreen from './Screens/HomeScreen'
+import { BrowserRouter, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
-const Div = styled.div``
+import NewsScreen from './Screens/NewsScreen'
+import NavBar from './Components/NavBar'
+import Footer from './Components/Footer'
+
 const App = () => {
     return (
-        <Router>
-            <Switch>
-                <Route>
-                    <Div>
-                        <HomeScreen />
-                    </Div>
-                </Route>
-            </Switch>
-        </Router>
+        <BrowserRouter>
+            <NavBar />
+            <main>
+                <Route path='/news/:id' component={NewsScreen}></Route>
+                <Route path='/' exact component={HomeScreen}></Route>
+            </main>
+            <Footer />
+        </BrowserRouter>
     )
 }
 
