@@ -44,19 +44,22 @@ const HomeScreen = () => {
     const [news, setNews] = useState([])
 
     useEffect(() => {
-        fetch('https://spaceflightnewsapi.net/api/v2/articles')
-            .then((res) => res.json())
-            .then(
-                (result) => {
-                    setIsLoaded(true)
-                    setNews(result)
-                },
+        const dataFetch = () => {
+            fetch('https://spaceflightnewsapi.net/api/v2/articles')
+                .then((res) => res.json())
+                .then(
+                    (result) => {
+                        setIsLoaded(true)
+                        setNews(result)
+                    },
 
-                (error) => {
-                    setIsLoaded(true)
-                    setError(error)
-                }
-            )
+                    (error) => {
+                        setIsLoaded(true)
+                        setError(error)
+                    }
+                )
+        }
+        dataFetch()
     }, [isLoaded, news])
 
     return (
